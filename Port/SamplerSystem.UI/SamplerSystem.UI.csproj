@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9E5EA333-C173-4DAC-B148-7FC0F8156AB7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>SamplerSystem.UI</RootNamespace>
+    <AssemblyName>SamplerSystem.UI</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>SRC\icon\logo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Condition\Mes\ResponseCode.cs" />
+    <Compile Include="Condition\Mes\UserPost.cs" />
+    <Compile Include="Condition\Mes\WOResponse.cs" />
+    <Compile Include="FileWriter\ResultFile.cs" />
+    <Compile Include="MES\APICommand.cs" />
+    <Compile Include="MES\MesAPI.cs" />
+    <Compile Include="MES\MesInfo.cs" />
+    <Compile Include="Models\Settings\BasicSetting.cs" />
+    <Compile Include="Models\Settings\FileSetting.cs" />
+    <Compile Include="Models\Settings\MesSetting.cs" />
+    <Compile Include="Models\Settings\PortSetting.cs" />
+    <Compile Include="Models\Settings\SysSettings.cs" />
+    <Compile Include="Models\UserInfo.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Testing\TestContext.cs" />
+    <Compile Include="Utilities\ConvertHelper.cs" />
+    <Compile Include="Utilities\Objects.cs" />
+    <Compile Include="Utilities\UIHelper.cs" />
+    <Compile Include="Views\FormAddTrayID.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FormAddTrayID.Designer.cs">
+      <DependentUpon>FormAddTrayID.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FormMesInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FormMesInfo.Designer.cs">
+      <DependentUpon>FormMesInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FormSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FormSettings.Designer.cs">
+      <DependentUpon>FormSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\viewBasicSetting.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\viewBasicSetting.Designer.cs">
+      <DependentUpon>viewBasicSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ViewControlBoardSetting.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\ViewControlBoardSetting.Designer.cs">
+      <DependentUpon>ViewControlBoardSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ViewFilePath.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\ViewFilePath.Designer.cs">
+      <DependentUpon>ViewFilePath.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ViewMesSetting.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\ViewMesSetting.Designer.cs">
+      <DependentUpon>ViewMesSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ViewPortSetting.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\ViewPortSetting.Designer.cs">
+      <DependentUpon>ViewPortSetting.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Views\FormAddTrayID.resx">
+      <DependentUpon>FormAddTrayID.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FormMesInfo.resx">
+      <DependentUpon>FormMesInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FormSettings.resx">
+      <DependentUpon>FormSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\viewBasicSetting.resx">
+      <DependentUpon>viewBasicSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ViewControlBoardSetting.resx">
+      <DependentUpon>ViewControlBoardSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ViewFilePath.resx">
+      <DependentUpon>ViewFilePath.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ViewMesSetting.resx">
+      <DependentUpon>ViewMesSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ViewPortSetting.resx">
+      <DependentUpon>ViewPortSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SamplerControlSystem\SamplerControlSystem.csproj">
+      <Project>{d6c4e23c-2a96-4ef2-bea5-0ce0fb822b0f}</Project>
+      <Name>SamplerControlSystem</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SamplerSystem.Port\SamplerSystem.Port.csproj">
+      <Project>{6613b744-b393-468b-a45e-93615979044b}</Project>
+      <Name>SamplerSystem.Port</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Entity\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SRC\icon\logo.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

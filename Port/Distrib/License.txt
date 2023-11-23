@@ -1,0 +1,4 @@
+Copyright (C) 2023-2024 ShenZhen HeiMan Technology Co., Ltd
+All rights reserved.
+
+此软件仅适用于海曼标定系统搭配使用!
